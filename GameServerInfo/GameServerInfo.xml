@@ -1,0 +1,1040 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameServerInfo</name>
+    </assembly>
+    <members>
+        <member name="T:GameServerInfo.GameServer">
+            <summary>
+            A class to query gaming servers
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.GameServer.#ctor(System.String,System.Int32,GameServerInfo.GameType)">
+            <param name="host">The IP address or the hostname of the gameserver</param>
+            <param name="port">The port of the gameserver</param>
+            <param name="type">The gameserver type</param>
+        </member>
+        <member name="M:GameServerInfo.GameServer.#ctor(System.String,System.Int32,GameServerInfo.GameType,System.Int32)">
+            <param name="host">The IP address or the hostname of the gameserver</param>
+            <param name="port">The port of the gameserver</param>
+            <param name="type">The gameserver type</param>
+            <param name="timeout">The timeout for the query</param>
+        </member>
+        <member name="M:GameServerInfo.GameServer.QueryServer">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.GameServer.CleanName(System.String)">
+            <summary>
+            Cleans the color codes from the player names
+            </summary>
+            <param name="name">Playername</param>
+            <returns>Cleaned playername</returns>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Timeout">
+            <summary>
+            Gets or sets the connectiontimeout
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Parameters">
+            <summary>
+            Gets the parsed parameters
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.IsOnline">
+            <summary>
+            Gets if the server is online
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.ScanTime">
+            <summary>
+            Gets the time the last scan
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Players">
+            <summary>
+            Gets the players on the server
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Teams">
+            <summary>
+            Get the teamnames if there are any
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.MaxPlayers">
+            <summary>
+            Gets the maximal player number
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.NumPlayers">
+            <summary>
+            Gets the number of players on the server
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Name">
+            <summary>
+            Gets the servername
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Map">
+            <summary>
+            Gets the mapname
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Passworded">
+            <summary>
+            Gets if the server is password protected
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.GameType">
+            <summary>
+            Gets the server gametype
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameServer.Protocol">
+            <summary>
+            Gets the used protocol
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GameServerInfo.GameServer.DebugMode">
+            <summary>
+            Enables the debugging mode
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.GameType">
+            <summary>
+            Gameserver types
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MultiTheftAuto">
+            <summary>
+            Multi-Theft Auto
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MultiTheftAutoViceCity">
+            <summary>
+            Multi-Theft Auto: Vice City
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.AgeOfEmpires2">
+            <summary>
+            Age of Empires 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.AgeOfEmpires2TheConquerors">
+            <summary>
+            Age of Empires 2: The Conquerors
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Soldat">
+            <summary>
+            Soldat
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Devastation">
+            <summary>
+            Devastation
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.PurgeJihad">
+            <summary>
+            Purge Jihad
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.UniversalCombat">
+            <summary>
+            Universal Combat
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.XpandRally">
+            <summary>
+            Xpand Rally
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.FarCry">
+            <summary>
+            Far Cry
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MedalOfHonorPacificAssault">
+            <summary>
+            Medal of Honor: Pacific Assault
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Chaser">
+            <summary>
+            Chaser
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Chrome">
+            <summary>
+            Chrome
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Quake3">
+            <summary>
+            Quake 3
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CallOfDuty">
+            <summary>
+            Call of Duty
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.JediKnightJediAcademy">
+            <summary>
+            Star Wars Jedi Knight: Jedi Academy
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CallOfDutyUnitedOffensive">
+            <summary>
+            Call of Duty: United Offensive
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.StarTrekVoyagerEliteForce">
+            <summary>
+            Star Trek: Voyager - Elite Force
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.StarTrekVoyagerEliteForce2">
+            <summary>
+            Star Trek: Voyager - Elite Force 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.SoldierOfFortune2">
+            <summary>
+            Soldier of Fortune 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.ReturnToCastleWolfenstein">
+            <summary>
+            Return to Castle Wolfenstein
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.WolfensteinEnemyTerritory">
+            <summary>
+            Wolfenstein: Enemy Territory
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.JediKnightJediOutcast">
+            <summary>
+            Star Wars Jedi Knight 2: Jedi Outcast
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.SoldierOfFortune">
+            <summary>
+            Soldier of Fortune
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Daikatana">
+            <summary>
+            Daikatana
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.HalfLife">
+            <summary>
+            Half-Life
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CounterStrike">
+            <summary>
+            Counter-Strike
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CounterStrikeConditionZero">
+            <summary>
+            Counter-Strike: Condition Zero
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.DayOfDefeat">
+            <summary>
+            Day of Defeat
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.GunmanChronicles">
+            <summary>
+            Gunman Chronicles
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Doom3">
+            <summary>
+            Doom 3
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.UnrealTournament2003">
+            <summary>
+            Unreal Tournament 2003
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.UnrealTournament2004">
+            <summary>
+            Unreal Tounrmanet 2004
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Unreal2XMP">
+            <summary>
+            Unreal 2 XMP
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MedalOfHonorAlliedAssault">
+            <summary>
+            Medal of Honor: Allied Assault
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MedalOfHonorBreakthrough">
+            <summary>
+            Medal of Honor: Breakthrough
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.MedalOfHonorSpearhead">
+            <summary>
+            Medal of Honor: Spearhead
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.GameSpy">
+            <summary>
+            GameSpy (Generic Protocol)
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.UnrealTournament">
+            <summary>
+            Unreal Tournament
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Descent3">
+            <summary>
+            Descent 3
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Battlefield1942">
+            <summary>
+            Battlefield 1942
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Postal2">
+            <summary>
+            Postal 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.DeusEx">
+            <summary>
+            Deus Ex
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.IL2Sturmovik">
+            <summary>
+            IL-2 Sturmovik
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.IL2SturmovikForgottenBattles">
+            <summary>
+            IL-2 Sturmovik: Forgotten Battles
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Heretic2">
+            <summary>
+            Heretic 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.IGI2CovertStrike">
+            <summary>
+            IGI-2: Covert Strike
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Gore">
+            <summary>
+            Gore
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Vietcong">
+            <summary>
+            Vietcong
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.SeriousSam">
+            <summary>
+            Serious Sam
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.SeriousSamTheSecondEncounter">
+            <summary>
+            Serious Sam: The Second Encounter
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.AliensVsPredators2">
+            <summary>
+            Aliens vs. Predators 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NoOneLivesForever">
+            <summary>
+            No One Lives Forever
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NoOneLivesForever2">
+            <summary>
+            No One Lives Forever 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Shogo">
+            <summary>
+            Shogo
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CodenameEagle">
+            <summary>
+            Codename: Eagle
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.GiantsCitizenKabuto">
+            <summary>
+            Giants: Citizen Kabuto
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.GlobalOperations">
+            <summary>
+            Global Operations
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NerfArenaBlast">
+            <summary>
+            Nerf ArenaBlast
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.RalliSportChallenge">
+            <summary>
+            RalliSport Challenge
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.RallyMasters">
+            <summary>
+            Rally Masters
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CommandAndConquerRenegade">
+            <summary>
+            Command and Conquer: Renegade
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Rune">
+            <summary>
+            Rune
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Sin">
+            <summary>
+            Sin
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TacticalOps">
+            <summary>
+            Tactical Ops
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Unreal">
+            <summary>
+            Unreal
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.WheelOfTime">
+            <summary>
+            Wheel of Time
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.DeadlyDozenPacificTheater">
+            <summary>
+            Deadly Dozen: Pacific Theater
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.DirtTrackRacing2">
+            <summary>
+            Dirt Track Racing 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.DrakanOrderOfTheFlame">
+            <summary>
+            Drakan: Order of the Flame
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.F12002">
+            <summary>
+            F1 2002
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.IronStorm">
+            <summary>
+            Iron Storm
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.JamesBondNightfire">
+            <summary>
+            James Bond: Nightfire
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Kingpin">
+            <summary>
+            Kingpin
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NeedForSpeedHotPursuit2">
+            <summary>
+            Need for Speed: Hot Pursuit 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Redline">
+            <summary>
+            Redline
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Turok2">
+            <summary>
+            Turok 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Tron2">
+            <summary>
+            Tron 2.0
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TonyHawksProSkater3">
+            <summary>
+            Tony Hawk's Pro Skater 3
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TonyHawksProSkater4">
+            <summary>
+            Tony Hawk's Pro Skater 4
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.V8SupercarChallenge">
+            <summary>
+            V8 Supercar Challenge
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TeamFactor">
+            <summary>
+            Team Factor
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.RainbowSix">
+            <summary>
+            Rainbow Six
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.RainbowSixRogueSpear">
+            <summary>
+            Rainbow Six: Rogue Spear
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NitroFamily">
+            <summary>
+            Nitro Family
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.RiseOfNations">
+            <summary>
+            Rise of Nations
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.ContractJACK">
+            <summary>
+            Contract J.A.C.K.
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Homeworld2">
+            <summary>
+            Homeworld 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Breed">
+            <summary>
+            Breed
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.OperationFlashPointResistance">
+            <summary>
+            Operation Flashpoint: Resistance
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.StarTrekBridgeCommander">
+            <summary>
+            Star Trek: Bridge Commander
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TribesVengeance">
+            <summary>
+            Tribes: Vengeance
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.TonyHawksUnderground2">
+            <summary>
+            Tony Hawk's Underground 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.StarWarsBattlefront">
+            <summary>
+            Star Wars: Battlefront
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.GameSpy2">
+            <summary>
+            GameSpy 2 (Generic Protocol)
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.BattlefieldVietnam">
+            <summary>
+            Battlefield Vietnam
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Painkiller">
+            <summary>
+            Painkiller
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.HaloCombatEvolved">
+            <summary>
+            Halo: Combat Evolved
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.AmericasArmy">
+            <summary>
+            America's Army
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.NeverwinterNights">
+            <summary>
+            Neverwinter Nights
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.OperationFlashpoint">
+            <summary>
+            Operation Flashpoint
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Source">
+            <summary>
+            Source Engine (Generic Protocol)
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.HalfLife2">
+            <summary>
+            Half-Life 2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.CounterStrikeSource">
+            <summary>
+            Counter-Strike: Source
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameType.Unkown">
+            <summary>
+            Not listed game
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.GameProtocol">
+            <summary>
+            Gameserver protocol
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.Ase">
+            <summary>
+            The all seeing eye
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.Doom3">
+            <summary>
+            Doom3
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.HalfLife">
+            <summary>
+            Halflife and HL-Mods
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.Quake3">
+            <summary>
+            Quake3 and Q3-Mods
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.Source">
+            <summary>
+            Halflife Source
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.GameSpy">
+            <summary>
+            Gamespy v1
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.GameSpy2">
+            <summary>
+            Gamespy v2
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.GameProtocol.None">
+            <summary>
+            Unkown
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.Player">
+            <summary>
+            Represents a player on a server
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.Player.#ctor">
+            <summary>
+            Represents a player on a server
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.Player.#ctor(System.String,System.Int32)">
+            <param name="name">Playername</param>
+            <param name="score">Playerscore</param>
+        </member>
+        <member name="M:GameServerInfo.Player.#ctor(System.String,System.Int32,System.Int32)">
+            <param name="name">Playername</param>
+            <param name="score">Playerscore</param>
+            <param name="ping">Playerping</param>
+        </member>
+        <member name="M:GameServerInfo.Player.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <param name="name">Playername</param>
+            <param name="team">Teamname</param>
+            <param name="score">Playerscore</param>
+            <param name="ping">Playerping</param>
+        </member>
+        <member name="P:GameServerInfo.Player.Name">
+            <summary>
+            Gets the playername
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Player.Score">
+            <summary>
+            Gets the playerscore
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Player.Ping">
+            <summary>
+            Gets the ping of the player
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Player.Team">
+            <summary>
+            Gets the team of the player
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Player.Time">
+            <summary>
+            Gets the time that the player is on the server
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Player.Parameters">
+            <summary>
+            Gets extended parameters
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.PlayerCollection">
+            <summary>
+            A strongly typed collection for holding player information.
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.PlayerCollection.Add(GameServerInfo.Player)">
+            <summary>
+            Adds an item to the PlayerCollection.
+            </summary>
+            <param name="value">The Player to add to the PlayerCollection</param>
+            <returns>The position into which the new element was inserted.</returns>
+        </member>
+        <member name="M:GameServerInfo.PlayerCollection.Remove(GameServerInfo.Player)">
+            <summary>
+            Removes the first occurrence of a specific Player from the PlayerCollection.
+            </summary>
+            <param name="value">The Player to remove from the PlayerCollection</param>
+        </member>
+        <member name="M:GameServerInfo.PlayerCollection.Insert(System.Int32,GameServerInfo.Player)">
+            <summary>
+            Inserts an item to the PlayerCollection at the specified position.
+            </summary>
+            <param name="index">The zero-based index at which value should be inserted.</param>
+            <param name="value">The Player to insert into the PlayerCollection.</param>
+        </member>
+        <member name="M:GameServerInfo.PlayerCollection.Contains(GameServerInfo.Player)">
+            <summary>
+            Determines whether the PlayerCollection contains a specific value.
+            </summary>
+            <param name="value">The Player to locate in the PlayerCollection.</param>
+            <returns>true if the Player is found in the PlayerCollection; otherwise, false.</returns>
+        </member>
+        <member name="M:GameServerInfo.PlayerCollection.#ctor">
+            <summary>
+            Creates a new instance of the PlayerCollection class.
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.PlayerCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.Protocol.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Timeout">
+            <summary>
+            Gets or sets the connectiontimeout
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Parameters">
+            <summary>
+            Gets the parsed parameters
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Teams">
+            <summary>
+            Gets the teamnames, not always set
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Players">
+            <summary>
+            Gets the players on the server
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.NumPlayers">
+            <summary>
+            Gets the number of players on the server
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.ScanTime">
+            <summary>
+            Gets the time the last scan
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.DebugMode">
+            <summary>
+            Enables the debugging mode
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Name">
+            <summary>
+            Gets the server name
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Map">
+            <summary>
+            Gets the mapname
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.Passworded">
+            <summary>
+            Gets if the server is password protected
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.IsOnline">
+            <summary>
+            Gets if the server is online
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Protocol.MaxPlayers">
+            <summary>
+            Gets the maximal player number
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.GameSpy.#ctor(System.String,System.Int32)">
+            <param name="host"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:GameServerInfo.GameSpy.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameSpy.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameSpy.Passworded">
+            <summary>
+            Gets if the server is password protected
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.GameSpy2.#ctor(System.String,System.Int32)">
+            <param name="host">Serverhost address</param>
+            <param name="port">Serverport</param>
+        </member>
+        <member name="M:GameServerInfo.GameSpy2.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameSpy2.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.GameSpy2.Passworded">
+            <summary>
+            Gets if the server is password protected
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.HalfLife.#ctor(System.String,System.Int32)">
+            <param name="host">Serverhost address</param>
+            <param name="port">Serverport</param>
+        </member>
+        <member name="M:GameServerInfo.HalfLife.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.HalfLife.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.Quake3.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Quake3.Name">
+            <summary>
+            Gets the server name
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Quake3.Mod">
+            <summary>
+            Gets the active modification
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Quake3.MaxPlayers">
+            <summary>
+            Gets the maximum player number
+            </summary>
+        </member>
+        <member name="P:GameServerInfo.Quake3.Passworded">
+            <summary>
+            Gets if the server is password protected
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.Quake3GameType">
+            <summary>
+            Quake3 gametypes
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Ffa">
+            <summary>
+            Free for All
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Tournament">
+            <summary>
+            One on One Tournament
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.SinglePlayer">
+            <summary>
+            Single Player FFA
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Team">
+            <summary>
+            Team Deathmatch
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Ctf">
+            <summary>
+            Capture the Flag
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.OneFlagCtf">
+            <summary>
+            One Flag CTF
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Obelisk">
+            <summary>
+            Obelisk
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.Harvester">
+            <summary>
+            Harvester
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.Quake3GameType.TeamTournament">
+            <summary>
+            Team Tournament
+            </summary>
+        </member>
+        <member name="M:GameServerInfo.Source.#ctor(System.String,System.Int32)">
+            <param name="host">Serverhost address</param>
+            <param name="port">Serverport</param>
+        </member>
+        <member name="M:GameServerInfo.Source.GetServerInfo">
+            <summary>
+            Querys the serverinfos
+            </summary>
+        </member>
+        <member name="T:GameServerInfo.SteamApplicationId">
+            <summary>
+            Steam Application Ids
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.DedicatedServer">
+            <summary>
+            A dedicated server
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.CounterStrike">
+            <summary>
+            Counter strike
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.TeamFortessClassic">
+            <summary>
+            Team fortress classic
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.DayOfDefeat">
+            <summary>
+            Day of defeat
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.DeathMatchClassic">
+            <summary>
+            death match classic
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.OpposingForce">
+            <summary>
+            opposing force
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.Ricochet">
+            <summary>
+            Ricochet
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.HalfLife">
+            <summary>
+            HalfLife
+            </summary>
+        </member>
+        <member name="F:GameServerInfo.SteamApplicationId.CounterStikeConditionZero">
+            <summary>
+            Counter stike condition zero
+            </summary>
+        </member>
+    </members>
+</doc>
